@@ -26,8 +26,7 @@ const (
 
 // A Hop represents the definition of a single hop type
 type Hop struct {
-    Name string
-    Version int
+    NameVersion
     Alpha float32
     Amount float32
     Use []HopUse
