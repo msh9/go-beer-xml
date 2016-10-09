@@ -10,14 +10,18 @@ type NameVersion struct {
     Version int
 }
 
-func (kg *Kilogram) ToGrams() {
+func (kg Kilogram) ToGrams() {
     return kg * 1000.
 }
 
-func (g *Gram) ToKilograms() {
+func (kg Kilogram) ToPounds() {
+    return kg / 0.45359237
+}
+
+func (g Gram) ToKilograms() {
     return g / 1000.
 }
 
-func (c *Celsius) ToFahrenheit() {
+func (c Celsius) ToFahrenheit() {
     return c * (9./5.) + 32.
 }
